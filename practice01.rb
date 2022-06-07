@@ -41,22 +41,20 @@ def gap_with_mul_10(input_num)
   return input_num - (input_num / 10) * 10
 end
 
-def outer_function()
-
-  def inner_function()
-    raise Exception
-  end
-
+def outer_function
+  inner_function = lambda { raise StandardError }
+  # def inner_function
+  #   raise StandardError
+  # end
   begin
-    inner_function()
-  rescue => e
-    puts "例外キャッチ"
+    inner_function
+  rescue StandardError => e
+    puts '例外キャッチ'
     e.message
   end
-
 end
 
-outer_function()
+outer_function
 
 # test
 # main(144)
