@@ -9,8 +9,8 @@
 def main(input_num)
   # エラーハンドリング
   begin
-    if (gap_with_mul_10(input_num) <= 2)
-      puts("True")
+    if gap_with_mul_10(input_num) <= 2
+      puts('True')
     else
       # 改行なし
       # print("10の倍数との差は#{gap_with_mul_10(input_num)}です。")
@@ -21,15 +21,15 @@ def main(input_num)
     # p e.message
     # puts e.message
     # puts e.class.name
-    puts "【NoMethodError】文字列を指定しないでください"
+    puts '【NoMethodError】文字列を指定しないでください'
     puts e.class
     # puts("例外発生")
   rescue => e
-    puts "例外発生"
+    puts '例外発生'
     puts e.message
     puts e.class
   ensure
-    puts "=== done ==="
+    puts '=== done ==='
   end
 end
 
@@ -61,4 +61,4 @@ outer_function
 # main(214)
 # main(898)
 main(898.8)
-main("898")
+main('898')
